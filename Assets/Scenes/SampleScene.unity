@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 838683477}
-  enemy: {fileID: 0}
+  enemy: {fileID: 6108358013418749079, guid: 9f997e9bcd2037a4f9952ba3068cd51d, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +303,6 @@ MonoBehaviour:
   spawnAmount: 2
   enemyObject: {fileID: 6108358013418749074, guid: 9f997e9bcd2037a4f9952ba3068cd51d, type: 3}
   spawnLocation: {fileID: 1346372639}
-  enemyPathfinding: {fileID: 143358781}
   timer: 2
 --- !u!1 &1346372638
 GameObject:

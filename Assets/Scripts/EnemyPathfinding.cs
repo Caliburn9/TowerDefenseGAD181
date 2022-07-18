@@ -5,10 +5,6 @@ using UnityEngine;
 public class EnemyPathfinding : MonoBehaviour
 {
     Pathfinding pathfind;
-    public GameObject target;
-
-    [HideInInspector]
-    public GameObject enemy;
 
     void Awake()
     {
@@ -18,11 +14,6 @@ public class EnemyPathfinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemy != null)
-        {
-            enemy.GetComponent<EnemyAI>().SetTargetPosition(target.transform.position);
-        }
-
         //Mouse logic
         float depth = Mathf.Abs(Camera.main.transform.position.z);
         Vector3 mouse = new Vector3(Input.mousePosition.x, Input.mousePosition.y, depth);

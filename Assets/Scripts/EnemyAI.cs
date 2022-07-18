@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public List<Vector3> positionVectorList;
+    public GameObject target;
     int currentPathIndex;
     float speed = 2.5f;
 
@@ -61,6 +62,11 @@ public class EnemyAI : MonoBehaviour
         if (positionVectorList != null)
         {
             Move();
+        }
+
+        if (target != null)
+        {
+            SetTargetPosition(target.transform.position);
         }
     }
 }

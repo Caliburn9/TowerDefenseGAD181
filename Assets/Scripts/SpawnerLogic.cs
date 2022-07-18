@@ -7,7 +7,6 @@ public class SpawnerLogic : MonoBehaviour
     public int spawnAmount;
     public GameObject enemyObject;
     public Transform spawnLocation;
-    public EnemyPathfinding enemyPathfinding;
     public float timer;
     float time = 0.0f;
     float minTimer, maxTimer;
@@ -37,7 +36,6 @@ public class SpawnerLogic : MonoBehaviour
             if (spawnAmount != 0)
             {
                 SpawnEnemy(enemyObject, spawnLocation);
-                enemyPathfinding.enemy = enemyObject;
                 spawnAmount--;
             }
         }
