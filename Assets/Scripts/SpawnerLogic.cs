@@ -6,7 +6,7 @@ public class SpawnerLogic : MonoBehaviour
 {
     public int spawnAmount;
     public GameObject enemyObject;
-    public Transform spawnLocation;
+    public Transform spawnLocation, targetLocation;
     public float timer;
     float time = 0.0f;
     float minTimer, maxTimer;
@@ -37,6 +37,7 @@ public class SpawnerLogic : MonoBehaviour
             {
                 SpawnEnemy(enemyObject, spawnLocation);
                 spawnAmount--;
+                enemyObject.GetComponent<EnemyAI>().target = targetLocation;
             }
         }
     }

@@ -97,7 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionVectorList: []
-  target: {fileID: 352945699715253726, guid: 84e87ec8f1d56064991f7cf8c79241c4, type: 3}
+  target: {fileID: 0}
+  health: 10
+  damage: 10
+  speed: 1.5
 --- !u!61 &6108358013418749078
 BoxCollider2D:
   m_ObjectHideFlags: 0

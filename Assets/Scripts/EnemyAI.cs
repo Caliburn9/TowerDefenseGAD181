@@ -5,9 +5,13 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public List<Vector3> positionVectorList;
-    public GameObject target;
+    public Transform target;
     int currentPathIndex;
-    float speed = 2.5f;
+    
+    //Stats
+    public int health;
+    public int damage;
+    public float speed;
 
     private void Move()
     {
@@ -66,7 +70,7 @@ public class EnemyAI : MonoBehaviour
 
         if (target != null)
         {
-            SetTargetPosition(target.transform.position);
+            SetTargetPosition(target.position);
         }
     }
 }

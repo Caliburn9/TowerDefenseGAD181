@@ -14,7 +14,7 @@ public class Base : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             Destroy(collision.gameObject);
-            ReduceHealth(10);
+            ReduceHealth(collision.GetComponent<EnemyAI>().damage);
         }
     }
 
