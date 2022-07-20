@@ -7,7 +7,6 @@ public class Pathfinding
     public const int HORIZONTAL_COST = 10;
     public const int DIAGONAL_COST = 14;
 
-    //Vector3.zero* grid.GetCellSize() * .5f
     Vector3 origin = new Vector3(-8.9f, -5f);
 
     public static Pathfinding Instance { get; private set; }
