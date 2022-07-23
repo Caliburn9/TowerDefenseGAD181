@@ -14,16 +14,18 @@ public class EnemyPathfinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Mouse logic
-        float depth = Mathf.Abs(Camera.main.transform.position.z);
-        Vector3 mouse = new Vector3(Input.mousePosition.x, Input.mousePosition.y, depth);
-        mouse = Camera.main.ScreenToWorldPoint(mouse);
-
         if (Input.GetMouseButtonDown(1))
         {
-            pathfind.GetGrid().GetXY(mouse, out int x, out int y);
+            pathfind.GetGrid().GetXY(GetMousePosition(), out int x, out int y);
             pathfind.GetNode(x, y).SetIsWalkable(!pathfind.GetNode(x, y).isWalkable);
             Debug.Log("Walkable variable has changed");
         }
+    }
+
+    private Vector3 GetMousePosition()
+    {
+        float depth = Mathf.Abs(Camera.main.transform.position.z);
+        Vector3 mouse = new Vector3(Input.mousePosition.x, Input.mousePosition.y, depth);
+        return mouse = Camera.main.ScreenToWorldPoint(mouse);
     }
 }
