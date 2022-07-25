@@ -13,6 +13,11 @@ public class EnemyAI : MonoBehaviour
     public int damage;
     public float speed;
 
+    private void Awake()
+    {
+        EnemyList.enemies.Add(gameObject);
+    }
+
     private void Move()
     {
         if (positionVectorList != null)
@@ -54,6 +59,21 @@ public class EnemyAI : MonoBehaviour
     private void Stop()
     {
         positionVectorList = null;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        EnemyList.enemies.Remove(gameObject);
+        Destroy(gameObject);
     }
 
     private void Start()
